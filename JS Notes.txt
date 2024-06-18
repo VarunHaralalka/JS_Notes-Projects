@@ -1,0 +1,65 @@
+#Some common practices, insights, To-dos and don'ts.
+
+We can use Node to directly run JS on our terminal instead of a browser console.
+"use strict" is written to tell compiler to treat the code as the new version of JS. However it is also not required anymore as it has become default.
+Prefer not to use 'var' due to block scope and functional scope issues.
+null => standalone value. typeof null => object.
+undefined => value/type not yet assigned. typeof udefined => undefined.
+
+#Type Conversion
+    To Convert to any datatype: 
+        let score = "50:
+        let converted = Number(score)   //Capitalise data type
+    To number:
+        "50" => 50
+        "50ab" => NaN (Typeof NaN is number)
+        true => 1; false => 0
+        null => 0
+        undefined => NaN (Typeof NaN is number)
+    To boolean:
+        0 => false
+        1 => true
+        2 => true ...
+        "" => false
+        null => false
+        undefined => false
+        "Varun" => true
+    To String:
+        anything becomes same as string, for eg
+        undefined => undefined (type has become string)
+        null => null
+
+#String:
+    console.log("1" + 2 + 2) => 122  //It converts rest to string as soon as a ""(string) is found.
+    console.log(1 + 2 + "2") => 31
+    String Interpolation: Use of ` backticks to work with strings.
+    Alternate way to declare a string: let name = new String("Varun");
+    This becomes a string object with positions of characters and the characters as key-value pairs.
+
+#Arrays:
+    For Storing values in arrays we use Square brackets in Javascript:
+    const Heroes = ['Shaktimaan', "Pokemaan"]; 
+
+#Objects:
+    Objects are stored in curly braces in the form key-value pairs:
+    We access the keys using dot operator. For eg: myObj.age = 23
+    let myObj = {
+        name:"Varun",
+        age:22
+    }
+
+#Functions:
+    We can treat functions in JS just like variables.
+    const myFunc = function(){
+        console.log("Hemlo World")
+    }
+
+
+
+
+
+
+
+
+#Some useful code snippets.
+console.table([variable1, variable2, variable3, ...]) =>    lets you print multiple variables in a tabular structure.
